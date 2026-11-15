@@ -109,8 +109,8 @@ shutdown /r /t 0
 ## 6. 从源码构建
 
 - Visual Studio 2026 + Windows Driver Kit（WDK），用户态 C++17 / C++20 均可。
-- 驱动、CLI、GUI 共享 `KernCmdShared.h` 的 IOCTL 契约；设备对象名与 IOCTL 数值彼此独立，改设备名不需要动 IOCTL。
-- 图标资源 DLL 由 `KernCmdDist/` 下的子集 TTF + `KernCmdFonts.rc` + 构建脚本生成，产物 `KernCmdFonts.dll` 不进仓库。
+- 驱动、CLI、GUI 共享 `KernCmdShared.h` 的 IOCTL 契约；设备对象名与 IOCTL 数值彼此独立，改设备名不需要动 IOCTL,但CLI并未发布。
+- 图标资源 DLL 由 ` KernCmdFonts.dll`提供,Link链接生成 。
 - 构建完成后按 3.3 生成并签名 catalog.
 
 ---
@@ -132,6 +132,10 @@ shutdown /r /t 0
 
 图标资源来自 Fluent UI System Icons（MIT）。MIT 只覆盖本项目自行编写的代码，
 第三方组件按各自许可证保留原始声明。
+
+大部分代码由AI生成,但已验证,无严重错误
+
+允许任何人/AI对仓库进行:反编译(虽然无意义),魔改,补丁,分支等操作,但不可进行违法操作,无论是发布者国家的法律还是你身处国家的法律.
 
 ---
 
