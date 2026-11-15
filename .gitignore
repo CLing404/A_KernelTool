@@ -426,3 +426,10 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+# Windows Driver Kits Project
+*.sys
+*.cat
+*.pfx
+*.cer
+*.res
+KernCmdDist/*.dll
